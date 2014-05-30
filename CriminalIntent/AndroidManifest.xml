@@ -15,13 +15,13 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".CrimeListActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.LAUNCHER"></category>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             
         </activity>
         <activity
-            android:name="com.bignerdranch.android.criminalintent.CrimeActivity"
+            android:name=".CrimeActivity"
             android:label="@string/title_activity_crime" >
             <!-- 
             <intent-filter>
