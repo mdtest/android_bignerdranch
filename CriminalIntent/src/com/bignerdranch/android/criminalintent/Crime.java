@@ -47,4 +47,10 @@ public class Crime {
 	public UUID getId() {
 		return mId;
 	}
+	
+	//overriding toString()
+	@Override
+	public String toString(){
+		return mTitle;
+	}
 }
