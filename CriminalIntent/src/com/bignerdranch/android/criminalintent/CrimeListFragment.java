@@ -43,6 +43,7 @@ public class CrimeListFragment extends ListFragment {
 		
 		//start CrimeActivity
 		Intent i = new Intent(getActivity(), CrimeActivity.class);
+		i.putExtra(CrimeFragment.EXTRA_CRIME_ID,  c.getId());
 		startActivity(i); 
 	}
 	
