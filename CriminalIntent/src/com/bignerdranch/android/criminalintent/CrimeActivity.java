@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 
 public class CrimeActivity extends SingleFragmentActivity {
+	//private static String TAG = "CrimeActivity";
 	/*
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class CrimeActivity extends SingleFragmentActivity {
 	
 	@Override
 	protected Fragment createFragment(){
+		//Log.d(TAG, "this is CrimeActivity ", new Exception());
 		return new CrimeFragment();
 	}
 	
