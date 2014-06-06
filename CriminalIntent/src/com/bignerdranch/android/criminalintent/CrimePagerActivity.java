@@ -45,6 +45,7 @@ public class CrimePagerActivity extends FragmentActivity{
 			}
 		}
 		
+		//
 		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener(){
 			public void onPageScrollStateChanged(int state){}
 			
