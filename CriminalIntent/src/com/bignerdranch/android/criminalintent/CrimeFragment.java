@@ -1,7 +1,10 @@
 package com.bignerdranch.android.criminalintent;
 
+import java.util.Date;
 import java.util.UUID;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -49,6 +52,22 @@ public class CrimeFragment extends Fragment {
 		
 		return fragment;
 	}
+
+	public void updateDate(){
+		mDateButton.setText(mCrime.getDate().toString());
+	}
+	
+	@Override 
+	public void onActivityResult(int requestCode, int resultCode, Intent data){
+		if(resultCode != Activity.RESULT_OK) return;
+		if(requestCode == REQUEST_DATE){
+			Date date = (Date)data.getSerializableExtra(DatePickerFragment.EXTRA_DATE);
+			mCrime.setDate(date);;
+			//mDateButton.setText(mCrime.getDate().toString());
+			updateDate();
+		}
+	}
+	
 	
 	
 	@Override
@@ -73,7 +92,8 @@ public class CrimeFragment extends Fragment {
 		});		
 		
 		mDateButton = (Button)v.findViewById(R.id.crime_date);
-		mDateButton.setText(mCrime.getDate().toString());
+		//mDateButton.setText(mCrime.getDate().toString());
+		updateDate();
 		//mDateButton.setEnabled(false);
 		mDateButton.setOnClickListener(new View.OnClickListener(){
 			public void onClick(View v){
